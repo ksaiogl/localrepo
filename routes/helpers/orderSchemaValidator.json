@@ -1,0 +1,228 @@
+{
+	"type": "object",
+	"required": true,
+	"properties": {
+		"orderInfo": {
+			"type": "object",
+			"required": true,
+			"properties": {
+				"orderPlatform": {
+					"type": "string",
+					"required": true,
+					"minLength": 1,
+					"enum": [
+						"web",
+						"mobile/android",
+						"mobile/ios",
+						"CRM"
+					]
+				},
+				"orderType": {
+					"type": "string",
+					"minLength": 1,
+					"enum": [
+						"Credit",
+						"Non Credit"
+					]
+				},
+				"orderDeliveryAddress": {
+					"type": "array",
+					"required": true,
+					"items": {
+						"type": "object",
+						"properties": {
+							"addressType": {
+								"type": "string",
+								"required": true,
+								"minLength": 1,
+								"enum": [
+									"Billing",
+									"Shipping"
+								]
+							},
+							"ContactfirstName": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"ContactlastName": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"Contactmobile": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"PAN": {
+								"type": "string",
+								"minLength": 0
+							},
+							"TIN": {
+								"type": "string",
+								"minLength": 0
+							},
+							"addressLine1": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"addressLine2": {
+								"type": "string",
+								"required": true
+							},
+							"city": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"state": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"country": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"pinCode": {
+								"type": "string",
+								"required": true,
+								"minLength": 6
+							}
+						}
+					}
+				},
+				"customerInfo": {
+					"type": "object",
+					"required": true,
+					"properties": {
+						"customerId": {
+							"type": "integer",
+							"required": true,
+							"minLength": 1
+						},
+						"customerFirstname": {
+							"type": "string",
+							"required": true
+						},
+						"customerLastname": {
+							"type": "string",
+							"required": true
+						},
+						"customerMobile": {
+							"type": "string",
+							"required": true
+						},
+
+						"primaryPersona": {
+							"type": "string",
+							"required": true,
+							"enum": [
+								"Contractor",
+								"Architect",
+								"Interior Designer",
+								"Builder",
+								"Infrastructure Company",
+								"Corporate",
+								"Institution",
+								"SME",
+								"Owner"
+							]
+						}
+					}
+				},
+				"orderItemInfo": {
+					"type": "array",
+					"required": true,
+					"items": {
+						"type": "object",
+						"properties": {
+							"sellerId": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"sku": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"skuName": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"skuImageURL": {
+								"type": "string",
+								"required": true
+							},
+							"offerPriceUnit": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"estimatedDeliveryDays": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							},
+							"qtyUnit": {
+								"type": "string",
+								"required": true,
+								"minLength": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"paymentInfo": {
+			"type": "object",
+			"required": true,
+			"properties": {
+				"amountPaid": {
+					"type": "number",
+					"required": true
+				},
+				"currency": {
+					"type": "string",
+					"required": true,
+					"minLength": 1
+				},
+				"status": {
+					"type": "string",
+					"required": true,
+					"enum": [
+						"Pending"
+					]
+				},
+				"paymentMode": {
+					"type": "string",
+					"required": true,
+					"enum": [
+						"CreditCard",
+						"DebitCard",
+						"NetBanking",
+						"PayUMoney",
+						"Cheque",
+						"DD",
+						"COD",
+						"PayTM"
+					]
+				},
+				"transactionId": {
+					"type": "string",
+					"required": true,
+					"maxLength": 0
+				}
+			}
+		},
+		"kartMessage": {
+			"type": "object",
+			"required": true
+		}
+	}
+}

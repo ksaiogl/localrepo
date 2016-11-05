@@ -1,0 +1,20 @@
+{
+  "type": "object",
+	"required": true,
+
+	"properties": {
+	  "orderId":{"type": "string", "required": true, "minLength": 10},
+			"paymentInfo":{
+			  "type": "object",
+			  "required": true,
+			  "properties": {
+			    "amountPaid":{"type": "number",	"required": true, "minimum": 0},
+			    "currency":{"type": "string",	"required": true, "minLength": 1},
+			    "status":{"type": "string",	 "enum": [ "Success","Failed" ]},
+			    "paymentMode":{"type": "string", "required": true, "minLength": 1, "enum":[ "CreditCard", "DebitCard", "NetBanking", "PayUMoney", "Cheque", "DD", "COD", "PayTM"]},
+			    "transactionId":{"type": "string", "required": true},
+          "orderStatus":{"type": "string","enum": [ "Confirmed","Failed" ]}
+			  }
+   }
+	}
+}

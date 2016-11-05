@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Verified</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/../../static/css/main.css"/>
+		<link rel="stylesheet" href="/../../static/css/font-awesome.min.css" /> 
+		<link class="ng-scope" ng-href="css/bootstrap.css" ng-repeat="(routeCtrl, cssUrl) in routeStyles" rel="stylesheet" href="/../../static/css/bootstrap.css">
+        <link class="ng-scope" ng-href="css/style.css" ng-repeat="(routeCtrl, cssUrl) in routeStyles" rel="stylesheet" href="/../../static/css/style.css">
+	</head>
+	<body ng-controller="mainController">
+		<!-- header part start -->
+		<div header-directive="">
+			<div class="wrapper-header clearfix">
+				 <header class="ng-header">
+					 <div class="main-header">
+						 <a class="header-anchor header-logo" href="http://www.msupply.com/supplier/index.html#/" style="margin-left:0;"> 
+							<img class="header-logo" src="/../../static/images/main_logo.png" alt="Building, Construction &amp; Interior Materials Online" title="Building, Construction &amp; Interior Materials Online" style="margin-left:0;">
+						 </a>
+					 </div>
+					 
+					 <nav class="list-account">
+						 <ul>
+							<li><a href="#"><i class="fa fa-question-circle fa-fw" aria-hidden="true"></i> Help</a></li>
+						 </ul>
+					 </nav>
+					 
+				 </header>	
+			</div>
+		</div>
+		<!-- header part end -->
+		<div class="main-page">
+			<!-- ngView: undefined -->
+			<ng-view class="main-view ng-scope">
+				<div class="account-page ng-scope verified_box"> 
+					<div class="details_header col-lg-12">
+						<div class="col-lg-12 text-center">							
+								<span class="sorry-text">Thank You</span><br/><br/><br/>
+								<span>Your email address is verified. <img alt="twitter" src="/../../static/images/verified_icon.png" class="verified_icon"></span><br/><br/>
+								<span>Please <a href="http://www.msupply.com/supplier/index.html#/" style="color:#0000f1;">Login</a> to your account and update your profile.</span>							
+						</div>
+					</div>
+				</div>
+			</ng-view>
+			<div class="grey-area"></div>
+				<div footer-directive="">  
+					<div class="ng-col-100 text-center rfn-footer-social ">
+					  <div class="ng-col-47 text-right">
+						<ul>
+						  <li><span>Social</span>
+						  </li>
+						  <li>
+							<a href="https://twitter.com/mSupplydotcom/" target="_blank"><img alt="twitter" src="http://www.msupply.com/skin/frontend/default/msupply/images/footer/tw.png">
+							</a>
+						  </li>
+						  <li>
+							<a href="https://plus.google.com/+mSupplydotcom/posts" target="_blank"><img alt="googleplus" src="http://www.msupply.com/skin/frontend/default/msupply/images/footer/goplus.png">
+							</a>
+						  </li>
+						  <li>
+							<a href="https://www.facebook.com/mSupplydotcom/" target="_blank"><img alt="facebook" src="http://www.msupply.com/skin/frontend/default/msupply/images/footer/fb.png">
+							</a>
+						  </li>
+						  <li>
+							<a href="https://www.linkedin.com/company/msupply-com" target="_blank"><img alt="Linkedin" src="http://www.msupply.com/skin/frontend/default/msupply/images/footer/in.png">
+							</a>
+						  </li>
+						</ul>
+					  </div>
+					  <div class="ng-col-47 text-left" style="margin-left:5%;">
+							<ul>
+							  <li><span>Contact Us</span></li>
+							  <li>
+									<a><img alt="email" src="http://www.msupply.com/skin/frontend/default/msupply/images/footer/foot_email.png"></a>
+									<div id="divlocation" class="popup-block">
+										 <ul>
+											<li>
+											    <label>customersupport@msupply.com</label>
+											</li>
+											<li>
+											    <label>suppliersupport@msupply.com</label>
+											</li>
+										 </ul>
+									</div>
+							  </li>
+							  <li>
+									<a><img alt="call" src="http://www.msupply.com/skin/frontend/default/msupply/images/footer/foot_call.png"></a>
+									<div id="divConnect" class="popup-block">
+									  <ul>
+										<!-- <li><label>18004199555</label></li> -->
+										<li>
+										  <label><span>Toll Free:</span> 18004199555</label>
+										</li>
+										<li>
+										  <label><span>SMS MSUPPLY to</span> 53456</label>
+										</li>
+									  </ul>
+									</div>
+							  </li>
+							  <li>
+									<a target="_blank" href="http://www.msupply.com/b2b-contactus/"><img alt="map" src="http://www.msupply.com/skin/frontend/default/msupply/images/footer/foot_map.png"></a>
+							  </li>
+							</ul>
+					  </div>
+					</div>
+					<div class="ng-col-100 text-center footer-text "> &copy; 2016 mSupply.com. All rights reserved.</div>
+				</div> 
+		</div>
+	</body>	    
+</html>

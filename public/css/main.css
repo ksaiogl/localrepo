@@ -1,0 +1,261 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:Arial;
+	line-height:1;
+	width:100%;
+}
+.ng-layout h1{
+	font-size:22px;
+}
+.ng-layout h2{
+	font-size:18px;
+}
+.ng-layout h3{
+	font-size:14px;
+}
+.ng-layout h1,.ng-layout h1,.ng-layout h1,.ng-layout h1{
+	color:#;
+	margin:10px 0 24px;
+}
+.ng-layout input,.ng-layout select{
+	padding:8px 10px;
+	border: 0;
+}
+
+.ng-col-100,.ng-col-75,.ng-col-50,.ng-col-25,.ng-col-47{	
+	float:left;
+}
+.ng-col-100{
+	width:100%;
+}
+.ng-col-75{
+	width:75%;
+}
+.ng-col-50{
+	width:50%;
+}
+.ng-col-25{
+	width:25%;
+}
+.text-right{
+	text-align:right;	
+}
+.text-center{
+	text-align:center;	
+}
+.text-left{
+	text-align:left;	
+}
+.move-right{
+	float:right;	
+}
+.move-left{
+	float:left;	
+}
+button{
+	width: 180px;
+	height: 40px;
+	border-radius:8px;
+	background: #97dde0;
+	font: 18px Arial;
+	color: #254c59;
+	outline: none;
+	cursor: pointer;
+}
+.btn-caps{
+	font-size:14px;
+	border-radius:2px;
+	text-transform:uppercase;
+}
+.btn.success{
+	background:#;
+}
+.btn.fail{
+	background:#;
+}
+.btn.warning{
+	background:#;
+}
+.btn.disabled{
+	background:#;
+}
+
+.wrapper-header{
+	width: 100%;
+	height: 68px;
+	background: #fff;
+	position: fixed;
+	z-index: 1000;
+}
+.ng-header{
+	top: 0px;
+    margin-top: 3px;
+	width:100%;
+	height: 60px;
+	background: #254c59; 
+}
+.header-anchor{
+	display: block;
+}
+.header-logo{
+	width: 485px;
+	height: 67px;
+	margin-top: -3.5px;
+	margin-left: 105px;
+}
+.main-header{
+   margin-left: 120px;
+   float: left;
+}
+.main-page{
+	position: absolute;
+	width: 100%;
+	margin-top: 60px;
+}
+
+.text-center.footer-text {
+	/*height: 15px;*/
+    padding: 10px 0;
+    background-color: #3f6c7b;
+    color: #fff;
+    font-size: 11px;
+    float: left;
+    width: 100%;
+	text-align:center;
+}
+
+.rfn-footer-social{
+    /*height: 55px;*/
+    margin-top:130px; 	
+	padding: 23px 0;
+	background-color: #264c59;
+	color: #F6F6F6;
+	font-size: 11px;
+	float: left;
+	width: 100%;
+}
+
+/*.rfn-footer-social > .ng-col-50.text-right  ul{margin-right:20px;}
+.rfn-footer-social > .ng-col-50.text-left  ul{margin-left:20px;}*/
+
+.rfn-footer-social li{display:inline-block; margin:0px 5px}
+
+.rfn-footer-social li>span{
+font-size: 20px;
+color: #cdcdcd;
+vertical-align:middle;
+}
+.popup-block{
+	display: none;
+}
+.ng-col-47{
+	width:47%;
+}
+.ng-col-47 ul{
+	    margin-right: 20px;
+}
+.ng-col-47 ul li span{
+	 /*height: 50px;*/
+	 display: inline-block;
+}
+.pad0{
+	padding: 0;
+}
+
+.margin-top20{
+	margin-top: 20px;
+}
+.marTB10{
+	margin: 10px 0;
+}
+
+h2{
+	margin: 10px 0;
+}
+.hide{
+	display: none;
+}
+.ng-modal-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #444;
+    opacity: 0.8;
+}
+.ng-modal-dialog {
+    z-index: 10000;
+    position: fixed;
+    width:500px;
+    height:190px; 
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+    text-align: center;
+}
+.ng-modal-close {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 5px;
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+}
+.ng-modal-dialog input,
+.ng-modal-dialog textarea {
+    border: 1px solid #ddd;
+    padding: 4px;
+    resize: none;
+}
+.ng-modal-dialog button {
+    padding: 5px 10px;
+}
+.ng-modal-dialog h4 {
+    background: #254c59;
+    margin: 0;
+    padding: 10px;
+    color: #bdbdbd;
+}
+.ng-modal-dialog p {
+    margin-top: 35px;
+}
+.login-error{
+	font-size:11px;
+	color:red;
+	margin-left: 25px;
+	position: absolute;
+	margin-top: -18px;
+}
+.terms .login-error{
+	float: left;
+    position: inherit !important;
+    margin-top: 0px;
+    text-indent: 10px
+}

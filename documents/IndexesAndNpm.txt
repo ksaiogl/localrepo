@@ -1,0 +1,105 @@
+Index Created in MongoCollections:
+
+#########################################################
+Supplier:
+#########################################################
+
+1) Supplier:
+	
+	db.Supplier.createIndex( { "supplierEntity.contactInfo.primaryMobile": 1} , { unique: true, name: "mobile_uniq_idx"})
+
+	db.Supplier.createIndex( { "supplierEntity.identifier.sellerId": 1} , { unique: true, name: "sellerId_uniq_idx"})
+
+	db.Supplier.createIndex( { "supplierEntity.contactInfo.primaryEmail": 1} , { unique: true, name: "email_uniq_idx"})
+
+2) Orders - To create Unique OrderID Index.
+   
+   db.Orders.createIndex( { "orderEntity.orderInfo.orderNumber": 1} , { unique: true, name: "orderNumber_uniq_idx"})
+
+   db.Orders.createIndex( { "orderEntity.orderInfo.sellerInfo.sellerId": 1} , {name: "sellerId_idx"})
+
+3) Seller
+
+db.Seller.createIndex( { "sellerEntity.identifier.sellerId": 1} , { unique: true, name: "seller_uniq_index"})
+
+db.Seller.createIndex( { "sellerEntity.sellerDetails.PAN": 1} , { unique: true, name: "PAN_uniq_index"})
+
+db.Seller.createIndex( { "sellerEntity.sellerDetails.VAT_TIN": 1} , { unique: true, name: "VAT_TIN_uniq_index"})
+
+#########################################################
+ServiceProvider (Affliates):
+#########################################################
+
+1) ServiceProvider - To create Unique index on mobile numbers.
+	
+	db.ServiceProvider.createIndex( { "serviceProviderEntity.profileInfo.accountInfo.mobile": 1} , { unique: true, name: "SP_mobile_uniq_idx"})
+
+	db.ServiceProvider.createIndex( { "serviceProviderEntity.profileInfo.accountInfo.email": 1} , { unique: true, name: "SP_email_uniq_idx"});
+
+
+
+
+
+
+#########################################################
+CronJobs
+#########################################################
+
+db.SellerProduct.createIndex( { "sellerProductEntity.sku": 1,"sellerProductEntity.refPrice":1} , {name: "sku_refPrice_idx"})
+
+db.ProductPrice.createIndex( { "productPriceEntity.sku": 1,"productPriceEntity.location.city":1} , {name: "sku_city_idx"})
+
+
+
+
+#########################################################
+Admin Pannel
+#########################################################
+
+db.AdminUsers.createIndex( { "userAuth.username": 1} , {unique: true, name: "userAuth.username_1"})
+
+
+
+
+
+
+
+
+
+
+
+#########################################################
+NPM Installed: 
+#########################################################
+
+1) sudo npm install body-parser
+
+2) sudo npm install log4js
+
+3) sudo npm install mongodb
+
+4) sudo npm install mysql  (To be removed later)
+
+5) sudo npm install otplib
+
+6) sudo npm install request
+
+7) sudo npm install mailgun-js (Only in Development)
+
+8) sudo npm install mailcomposer
+
+9) sudo npm install emailjs
+
+10) sudo npm install node-ses
+
+11) sudo npm install underscore
+
+12) sudo npm install moment
+
+13) sudo npm install express
+
+14) sudo npm install node-schedule
+
+
+
+
